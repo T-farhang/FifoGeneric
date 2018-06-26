@@ -21,11 +21,11 @@ public class GenericQueue<E> {
         return list.get(0);
     }
 
-    public void push(E o) {
+    public void enqueue(E o) {
         list.add(o);
     }
 
-    public E pop() {
+    public E dequeue() {
         E o = list.get(0);
         list.remove(o);
         return o;
@@ -37,6 +37,6 @@ public class GenericQueue<E> {
 
     @Override
     public String toString() {
-        return "Queue: " + list.toString();
+        return "Queue: " + list;
     }
 }

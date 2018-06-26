@@ -15,31 +15,47 @@ public class FifoGeneric {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        GenericQueue<String> qString = new GenericQueue<>();
-        qString.push("American");
-        qString.push("English");
-        qString.push("Iranian");
-        qString.push("British");
-        System.out.println(qString);
-        System.out.println(qString.getSize());
+//        GenericQueue<String> qString = new GenericQueue<>();
+//        qString.enqueue("American");
+//        qString.enqueue("English");
+//        qString.enqueue("Iranian");
+//        qString.enqueue("British");
+//        System.out.println(qString);
+//        System.out.println(qString.getSize());
+//
+//        qString.dequeue();
+//        System.out.println(qString);
+//        System.out.println(qString.getSize());
+//        qString.enqueue("Australian");
+//        System.out.println(qString);
+//        qString.dequeue();
+//        qString.dequeue();
+//        qString.peek();
+//        System.out.println(qString);
+//
+//        GenericQueue<Integer> qInt = new GenericQueue<>();
+//        qInt.enqueue(12);
+//        qInt.enqueue(2);
+//        qInt.enqueue(8);
+//        System.out.println(qInt);
+//        qInt.dequeue();
+//        qInt.dequeue();
+//        System.out.println(qInt);
 
-        qString.pop();
-        System.out.println(qString);
-        System.out.println(qString.getSize());
-        qString.push("Australian");
-        System.out.println(qString);
-        qString.pop();
-        qString.pop();
-        qString.peek();
-        System.out.println(qString);
+        GenericPriorityQueue<Integer> qListInt = new GenericPriorityQueue<>();
+        qListInt.enqueue(6, 9);
+        qListInt.enqueue(12, 4);
+        qListInt.enqueue(4, 6);
+        qListInt.enqueue(6, 3);
+        qListInt.enqueue(1, 7);
+        System.out.println(qListInt);
 
-        GenericQueue<Integer> qInt = new GenericQueue<>();
-        qInt.push(12);
-        qInt.push(2);
-        qInt.push(8);
-        System.out.println(qInt);
-        qString.pop();
-        qString.pop();
-        System.out.println(qInt);
+        qListInt.Dequeue();
+        System.out.println(qListInt);
+        qListInt.Dequeue();
+        System.out.println(qListInt);
+        qListInt.Dequeue();
+        System.out.println(qListInt);
+
     }
 }
